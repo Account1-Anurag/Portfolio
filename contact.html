@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img class="navimg" src="display.png" alt="Logo" />
+    </div>
+    <div class="menu">
+        <ul class="navbar">
+          <li class="listli"><a href="index.html">Home</a></li>
+          <li class="listli"><a href="about.html">About</a></li>
+          <li class="listli"><a href="project.html">Projects</a></li>
+          <li class="listli"><a href="https://drive.google.com/file/d/1ehF2JseC6p5Mg9bKMVe6aWxnVVq1fzVj/view?usp=drive_link" target="_blank">Portfolio</a></li>
+          <li class="listli"><a href="contact.html">Contact</a></li>
+          <li class="listli toggle-mode"><i class="fas fa-moon"></i></li>
+        </ul>
+      </div>
+  </nav>
+
+  <section class="contact-section">
+    <h1>Contact Me</h1>
+    <p>Have a question, project idea, or just want to say hello?</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    const toggle = document.querySelector('.toggle-mode');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>

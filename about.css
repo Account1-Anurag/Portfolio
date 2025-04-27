@@ -1,0 +1,46 @@
+/* Default Light Mode Styles */
+body {
+    background-color: white;
+    color: black;
+}
+
+.navbar a {
+    color: black;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;  /* Dark background for the body */
+    color: white;  /* Light text for readability */
+}
+
+body.dark-mode .navbar a {
+    color: white;  /* White text for navigation links in dark mode */
+}
+
+body.dark-mode .toggle-mode i {
+    color: white;  /* Change the moon icon to white in dark mode */
+}
+
+body.dark-mode .about-text h1,
+body.dark-mode .skills h2 {
+    color: white;  /* Change headings to white in dark mode */
+}
+
+body.dark-mode .about-text p,
+body.dark-mode .skills span {
+    color: #b3b3b3;  /* Lighter text for paragraphs and spans in dark mode */
+}
+
+body.dark-mode .about-container {
+    background-color: #1e1e1e;  /* Darker container background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+}
+
+body.dark-mode .about-image img {
+    filter: brightness(0.8);  /* Darken image to fit dark mode theme */
+}
+
+body.dark-mode .btn {
+    background-color: #333;  /* Dark background for buttons */
+    color: white;  /* White*

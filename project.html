@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img class="navimg" src="display.png" alt="Logo">
+        </div>
+        <div class="menu">
+            <ul class="navbar">
+              <li class="listli"><a href="index.html">Home</a></li>
+              <li class="listli"><a href="about.html">About</a></li>
+              <li class="listli"><a href="project.html">Projects</a></li>
+              <li class="listli"><a href="https://drive.google.com/file/d/1ehF2JseC6p5Mg9bKMVe6aWxnVVq1fzVj/view?usp=drive_link" target="_blank">Portfolio</a></li>
+              <li class="listli"><a href="contact.html">Contact</a></li>
+              <li class="listli toggle-mode"><i class="fas fa-moon"></i></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="projects-section">
+        <h1>My Creative Projects</h1>
+        <div class="projects-container">
+            <div class="project-card">
+                <h2>Student Attendance System</h2>
+                <p>A responsive web app for tracking and managing student attendance using Flask, HTML, JS, and Bootstrap.</p>
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h2>Portfolio Website</h2>
+                <p>This very portfolio website, built with HTML, CSS, and a bit of creative soul.</p>
+                <a href="#">View Live</a>
+            </div>
+
+            <div class="project-card">
+                <h2>Image Steganography Tool</h2>
+                <p>Hides text in PNG/BMP images using Python LSB algorithm and Flask for backend.</p>
+                <a href="#">GitHub Repo</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const toggle = document.querySelector('.toggle-mode');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
