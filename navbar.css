@@ -1,0 +1,182 @@
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 100px;
+  padding: 20px 0;
+  position: relative;
+  max-width: 1200px;
+}
+
+.logo img {
+  width: 166px;
+  height: 23.14px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.listli {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.listli a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.listli:hover {
+  color: teal;
+}
+
+.toggle-mode {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+body.dark-mode nav {
+  background-color: #1c1c1c;
+}
+
+body.dark-mode .listli a {
+  color: #f0f0f0;
+}
+
+body.dark-mode .projects-section h1 {
+  color: #ffd700;
+}
+
+body.dark-mode .project-card {
+  background-color: #2b2b2b;
+  color: #eee;
+}
+
+body.dark-mode .project-card p {
+  color: #ddd;
+}
+
+body.dark-mode .project-card a {
+  color: #ffd700;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 101;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 1024px) {
+  nav {
+    margin: 0 50px;
+  }
+
+  .navbar {
+    gap: 25px;
+  }
+
+  .projects-section {
+    padding: 40px 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    margin: 0 30px;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: #f4f4f4;
+    transition: right 0.4s ease;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding-top: 70px;
+  }
+
+  body.dark-mode .menu {
+    background: #1c1c1c;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 30px;
+    gap: 25px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .listli {
+    font-size: 14px;
+  }
+
+  nav {
+    margin: 0;
+    padding: 10px 15px;
+  }
+
+  .navbar {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .menu {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 15px 10px;
+  }
+
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+
+  .hamburger {
+    font-size: 20px;
+  }
+
+  .menu {
+    width: 180px;
+  }
+}

@@ -1,14 +1,17 @@
-*{
+/* Fixing conflicting CSS rules first */
+* {
     box-sizing: border-box;
-    margin: 0px 10px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
+
 body {
     position: relative;
-    
-    /* overflow: hidden; */
-    overflow-x: hidden; /* Hides horizontal scrollbar */
-    overflow-y: scroll; /* Enables vertical scrolling */
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    min-height: 100vh;
+    transition: background 0.3s, color 0.3s;
 }
 
 /* Hide scrollbar for WebKit browsers (Chrome, Safari) */
@@ -21,88 +24,149 @@ html {
     scrollbar-width: none;
 }
 
-nav{
+/* Navbar */
+nav {
     display: flex;
     justify-content: space-between;
-    /* background-color: yellow; */
-    margin: 0px 100px 0px 60px;
+    margin: 0px 5%;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    position: relative;
 }
-.menu{
+
+.menu {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 10px 0;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
 }
-.navbar{
+
+.navbar {
     display: flex;
     gap: 40px;
-    /* background-color: white; */
     padding: 5px;
+    flex-wrap: wrap;
 }
-.listli{
-    list-style:none;
-    font-size: 20px;
+
+.listli {
+    list-style: none;
+    font-size: 18px;
 }
-.listli:hover{
+
+.listli a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.listli:hover, .listli a:hover {
     color: teal;
     cursor: pointer;
 }
-.navimg{
-    margin: 20px;
+
+.navimg {
+    margin: 10px;
     width: 166px;
     height: 23.14px;
+    max-width: 100%;
 }
-main{
+
+/* Mobile Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .hamburger-menu span {
+    background-color: #fff;
+}
+
+/* Main Section */
+main {
     display: flex;
     justify-content: space-around;
-    padding-top: 25px;
+    padding: 25px 3%;
+    flex-wrap: wrap;
+    gap: 30px;
 }
-.first{
+
+.first {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    min-width: 300px;
 }
-.second img{
+
+.second {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.second img {
     border-radius: 50%;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    width:40rem;
-
-
+    width: 100%;
+    max-width: 40rem;
+    height: auto;
 }
-#naming{
-    font-size: 65px;
+
+/* Text */
+#naming {
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 30px;
 }
-#profe{
-    font-size: 30px;
-    margin-bottom: 85px;
+
+#profe {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
     color: grey;
 }
 
-.prename{
-    margin-top: 80px;
-    margin-bottom: 90px;
+.prename {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
-.number{
+
+.number, .contact {
     display: flex;
-    text-align: center;
-    font-size: 15px;
-}
-.contact{
-    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-    text-align: center;
     font-size: 15px;
+    gap: 10px;
 }
-.prename p{
+
+.prename p {
     color: grey;
 }
-.prename :first-child{
+
+.prename :first-child {
     margin-bottom: 10px;
 }
+
 .circle {
     position: absolute;
     width: 90rem;
@@ -110,53 +174,49 @@ main{
     background-color: rgba(97, 149, 239, 0.5);
     border-radius: 50%;
     bottom: 0%;
-    left:45%;
+    left: 45%;
     z-index: -1;
-}
-.ji{
-    height: 500px;
-    width: 868px;
-    background-color: blue;
-}
-.about{
-    margin-top: 1000px;
+    transition: all 0.3s ease;
 }
 
-
+/* About Section */
 .about-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px;
+    padding: 80px 5%;
     background: linear-gradient(to right, #ffffff, #e3e6e8);
     flex-wrap: wrap;
+    gap: 30px;
 }
 
-.about-container{
+.about-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
 }
 
 .about-text {
-    /* max-width: 550px; */
     flex: 1.5;
+    min-width: 300px;
 }
 
-
 .about-text h1 {
-    font-size: 42px;
+    font-size: 2.2rem;
     color: #222;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .about-text p {
-    font-size: 20px;
+    font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
-    
 }
-#aboutp1{
+
+#aboutp1 {
     margin-bottom: 20px;
 }
 
@@ -179,19 +239,21 @@ main{
 .about-image {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    min-width: 300px;
 }
 
 .about-image img {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* General Styling */
+/* Skills Section */
 .skills {
     text-align: center;
-    padding: 50px 20px;
+    padding: 50px 5%;
     background: linear-gradient(135deg, #f0f0f0, #ffffff);
 }
 
@@ -204,7 +266,6 @@ main{
     position: relative;
 }
 
-/* Grid Layout for Skills */
 .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -223,6 +284,7 @@ main{
     flex-direction: column;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
 }
 
 .skill:hover {
@@ -231,8 +293,10 @@ main{
 }
 
 .skill img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    max-height: 200px;
     object-fit: contain;
     margin-bottom: 10px;
     transition: transform 0.3s ease;
@@ -248,207 +312,24 @@ main{
     color: #555;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .skills-container {
-        grid-template-columns: repeat(2, minmax(120px, 1fr));
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-container {
-        grid-template-columns: repeat(1, minmax(120px, 1fr));
-    }
-}
-
-/* General Reset */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    position: relative;
-    overflow-x: hidden;
-    min-height: 100vh;
-    transition: background 0.3s, color 0.3s;
-}
-
-body.dark-mode {
-    background-color: #121212;
-    color: #f5f5f5;
-}
-
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 100px 0px 60px;
-}
-
-.menu {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.navbar {
-    display: flex;
-    gap: 40px;
-}
-
-.listli {
-    list-style: none;
-    font-size: 20px;
-}
-
-.listli a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.listli:hover {
-    color: teal;
-    cursor: pointer;
-}
-
-.navimg {
-    margin: 20px;
-    width: 166px;
-    height: 23.14px;
-}
-
-/* Main Section */
-main {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 25px;
-}
-
-.first {
-    display: flex;
-    flex-direction: column;
-}
-
-.second img {
-    border-radius: 50%;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    width: 40rem;
-}
-
-/* Text */
-#naming {
-    font-size: 65px;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
-
-#profe {
-    font-size: 30px;
-    margin-bottom: 85px;
-    color: grey;
-}
-
-.prename {
-    margin-top: 80px;
-    margin-bottom: 90px;
-}
-
-.number,
-.contact {
-    display: flex;
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 15px;
-}
-
-.prename p {
-    color: grey;
-}
-
-.circle {
-    position: absolute;
-    width: 90rem;
-    height: 90rem;
-    background-color: rgba(97, 149, 239, 0.5);
-    border-radius: 50%;
-    bottom: 0%;
-    left: 45%;
-    z-index: -1;
-}
-
 /* Dark Mode */
-body.dark-mode .contact {
-    color: #f5f5f5;
-}
-
-body.dark-mode .number {
-    color: #f5f5f5;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .first {
-        padding: 0 20px;
-        text-align: center;
-    }
-
-    #naming {
-        font-size: 50px;
-    }
-
-    #profe {
-        font-size: 20px;
-    }
-
-    .second img {
-        width: 25rem;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .first {
-        text-align: center;
-    }
-
-    .second img {
-        width: 20rem;
-    }
-
-    #naming {
-        font-size: 45px;
-    }
-
-    #profe {
-        font-size: 18px;
-    }
-}
-/* Light mode styles (default) */
-body {
-    background-color: white;
-    color: black;
-}
-
-/* Dark mode styles */
 body.dark-mode {
     background-color: #121212;
-    color: white;
-}
-
-.navbar a {
-    color: black;
+    color: #f5f5f5;
 }
 
 body.dark-mode .navbar a {
     color: white;
+}
+
+body.dark-mode .contact,
+body.dark-mode .number,
+body.dark-mode #profe {
+    color: #ddd;
+}
+
+body.dark-mode .prename p {
+    color: #bbb;
 }
 
 body.dark-mode .btn {
@@ -456,8 +337,266 @@ body.dark-mode .btn {
     color: white;
 }
 
+body.dark-mode .about-section {
+    background: linear-gradient(to right, #222, #333);
+}
+
+body.dark-mode .about-text h1 {
+    color: #fff;
+}
+
+body.dark-mode .about-text p {
+    color: #ddd;
+}
+
+body.dark-mode .skills {
+    background: linear-gradient(135deg, #222, #333);
+}
+
+body.dark-mode .skills h2 {
+    color: #fff;
+}
+
+body.dark-mode .skill {
+    background: #2a2a2a;
+}
+
+body.dark-mode .skill span {
+    color: #ddd;
+}
+
 body.dark-mode .toggle-mode i {
     color: white;
 }
 
-/* You can further customize styles for dark mode here */
+/* Enhanced Responsive Styles */
+@media (max-width: 1200px) {
+    .circle {
+        width: 70rem;
+        height: 70rem;
+        left: 40%;
+    }
+    
+    nav {
+        margin: 0px 3%;
+    }
+    
+    #naming {
+        font-size: 3.5rem;
+    }
+    
+    #profe {
+        font-size: 1.6rem;
+        margin-bottom: 40px;
+    }
+    
+    .prename {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .first {
+        order: 2;
+        text-align: center;
+    }
+    
+    .second {
+        order: 1;
+        margin-bottom: 30px;
+    }
+    
+    .second img {
+        max-width: 25rem;
+    }
+    
+    .prename {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .contact, .number {
+        justify-content: center;
+    }
+    
+    .circle {
+        width: 50rem;
+        height: 50rem;
+        left: 30%;
+    }
+    
+    .about-text, .about-image {
+        flex: 100%;
+        text-align: center;
+    }
+    
+    .about-image {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Show hamburger menu */
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    /* Hide the normal menu */
+    .menu {
+        width: 100%;
+    }
+    
+    /* Style the collapsible navbar */
+    .navbar {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background-color: white;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+    
+    body.dark-mode .navbar {
+        background-color: #222;
+    }
+    
+    /* When navbar is shown */
+    .navbar.active {
+        display: flex;
+    }
+    
+    .listli {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    body.dark-mode .listli {
+        border-bottom: 1px solid #333;
+    }
+    
+    .listli:last-child {
+        border-bottom: none;
+    }
+    
+    /* Adjust other elements for mobile */
+    #naming {
+        font-size: 3rem;
+    }
+    
+    #profe {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
+    
+    .second img {
+        max-width: 20rem;
+    }
+    
+    /* Remove circle on smaller screens */
+    .circle {
+        display: none;
+    }
+    
+    .about-section {
+        padding: 50px 5%;
+    }
+    
+    .about-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .listli {
+        font-size: 14px;
+    }
+    
+    nav {
+        margin: 0px;
+        padding: 10px 15px;
+    }
+    
+    .navbar {
+        gap: 0;
+    }
+    
+    #naming {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    #profe {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+    
+    .prename {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .second img {
+        max-width: 15rem;
+    }
+    
+    .about-section {
+        padding: 30px 5%;
+    }
+    
+    .about-text h1 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .skills h2 {
+        font-size: 1.5rem;
+    }
+    
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    #naming {
+        font-size: 2rem;
+    }
+    
+    #profe {
+        font-size: 1rem;
+    }
+    
+    .contact, .number {
+        font-size: 14px;
+    }
+    
+    .second img {
+        max-width: 12rem;
+    }
+}
+

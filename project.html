@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="project.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav>
         <div class="logo">
             <img class="navimg" src="display.png" alt="Logo">
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
         </div>
         <div class="menu">
             <ul class="navbar">
@@ -35,8 +38,7 @@
 
             <div class="project-card">
                 <h2>To-Do App</h2>
-                <p>
-                    A simple and efficient task management application built using React. It allows users to add, delete, and mark tasks as completed with a clean and responsive UI.</p>
+                <p>A simple and efficient task management application built using React. It allows users to add, delete, and mark tasks as completed with a clean and responsive UI.</p>
                 <a href="https://todo.anuragk.me/" target="_blank">View Live</a>
             </div>
 
@@ -49,9 +51,45 @@
     </section>
 
     <script>
+        // Dark mode toggle
         const toggle = document.querySelector('.toggle-mode');
         toggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
+        });
+        
+        // Hamburger menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const menu = document.querySelector('.menu');
+        
+        hamburger.addEventListener('click', (event) => {
+            menu.classList.toggle('active');
+            event.stopPropagation(); // Prevent document click from immediately closing menu
+            
+            // Change icon based on menu state
+            if (menu.classList.contains('active')) {
+                hamburger.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+        
+        // Close menu when clicking on menu items
+        const menuItems = document.querySelectorAll('.navbar li a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                menu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (menu.classList.contains('active') && 
+                !event.target.closest('.menu') && 
+                !event.target.closest('.hamburger')) {
+                menu.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            }
         });
     </script>
 </body>
