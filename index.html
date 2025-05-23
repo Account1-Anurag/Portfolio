@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anurag | portfolio</title>
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/source-code.png" />
+
+
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Professional portfolio for John Doe, a web developer specializing in responsive web design"
+    />
+  </head>
+  <body class="light-mode">
+    <!-- Loading Animation -->
+    <div class="loading-screen">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <a href="#hero">AK</a>
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="theme-toggle">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="toggle-ball"></div>
+          </div>
+          <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="fade-in">Anurag Kumar</h1>
+          <h2 class="fade-in">Web Developer & CP Programmer</h2>
+          <p class="fade-in">Believe in writing clean & Optimized code.</p>
+          <div class="cta-buttons fade-in">
+            <a href="#projects" class="btn primary-btn">View My Work</a>
+            <a href="#contact" class="btn secondary-btn">Get In Touch</a>
+          </div>
+          <div class="social-icons fade-in">
+            <a
+              href="https://github.com/Account1-Anurag"
+              target="_blank"
+              aria-label="GitHub profile"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/anurag-vasu/"
+              target="_blank"
+              aria-label="LinkedIn profile"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="https://x.com/Anurag_kumar_07" target="_blank" aria-label="Twitter profile"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse"></div>
+          <p>Scroll Down</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-img">
+            <img
+              src="/Assets/mypic.jpg"
+              alt="John Doe's profile picture"
+              loading="lazy"
+            />
+          </div>
+          <div class="about-text">
+            <p>
+              Hello! I'm Anurag, a dedicated web developer and tech enthusiast
+              with hands-on experience in building responsive and dynamic web
+              applications. I specialize in frontend development using HTML,
+              CSS, JavaScript, and I’m currently diving deeper into React and
+              full-stack development.
+            </p>
+            <p>
+              With a strong foundation in C++ and competitive programming, I
+              bring logical problem-solving skills into every project. I’ve
+              contributed to open-source initiatives, led student tech
+              communities like RJIT Geeks Club, and built projects ranging from
+              student attendance systems to animation-rich login pages. Beyond
+              coding, I enjoy exploring new technologies, organizing tech
+              events, and engaging with developer communities.
+            </p>
+
+            <div class="key-skills">
+              <h3>Core Technologies:</h3>
+              <div class="skill-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Bootstrap</span>
+                <span>Tailwind CSS</span>
+                <span>MongoDB</span>
+                <span>Express.js</span>
+                <span>MySql</span>
+                <span>Node.js</span>
+                <span>UI/UX Design</span>
+              </div>
+            </div>
+            <a
+              href="https://drive.google.com/file/d/11qN1IOCJex7zerQ8XLpjV29VszlL476p/view?usp=sharing"
+              target="_blank"
+              class="btn primary-btn download-btn"
+            >
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="mobile">Mobile</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-category="web">
+            <div class="project-img">
+              <img
+                src="/Assets/echoverse.png"
+                alt="Echoverse website project"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Echoverse Video Chat WebApp</h3>
+              <p>
+                A real-time video chat web application enabling seamless
+                peer-to-peer communication using WebRTC. Includes features like
+                user authentication, dynamic room creation, and responsive UI
+                for smooth cross-device usability.
+              </p>
+              <div class="project-tech">
+                <span>ReactJs</span>
+                <span>MongoDB</span>
+                <span>ExpressJs</span>
+                <span>WebRTC</span>
+                <span>Node.js</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://streamify-project.onrender.com/" target="_blank"
+                  aria-label="View live demo"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+                <a
+                  href="https://github.com/Account1-Anurag/Streamify-Project"
+                  target="_blank"
+                  aria-label="View code on GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="project-card" data-category="web">
+            <div class="project-img">
+              <img
+                src="/Assets/food.png"
+                alt="Food Recipe Web App project"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Food Recipe Web App</h3>
+              <p>
+                A full-stack MERN application that allows users to explore and
+                search for food recipes using external APIs. Features include
+                user authentication, saved recipes, and responsive design for
+                both desktop and mobile.
+              </p>
+              <div class="project-tech">
+                <span>MongoDB</span>
+                <span>Express.js</span>
+                <span>React</span>
+                <span>Node.js</span>
+              </div>
+              <div class="project-links">
+                <!-- <a href="#" aria-label="View live demo"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a> -->
+                <a
+                  href="https://github.com/Account1-Anurag/Food-Blog-Website"
+                  target="_blank"
+                  aria-label="View code on GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="project-card" data-category="web">
+            <div class="project-img">
+              <img
+                src="/Assets/sams.png"
+                alt="Dashboard UI design project"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Student Attendance Management System</h3>
+              <p>
+                A web-based application designed for efficient attendance
+                tracking with role-based login for students, faculty, and HODs.
+                Features include attendance marking, report generation, and a
+                clean, responsive UI for seamless use.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://sams.freesite.online/" target="_blank"
+                  aria-label="View live demo"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+                <a
+                  href="https://github.com/Account1-Anurag/sams"
+                  target="_blank"
+                  aria-label="View code on GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div class="project-card" data-category="web">
+            <div class="project-img">
+              <img
+                src="/Assets/imgstegan.png"
+                alt="Task management web app project"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-info">
+              <h3>Image Steganography</h3>
+              <p>
+                A web application that hides and retrieves secret text messages
+                within images using the Least Significant Bit (LSB) method.
+                Built with Flask and designed with a clean, responsive
+                Bootstrap-based UI.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Flask</span>
+                <span>Python</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://imgcrypt-6.onrender.com/" target="_blank"
+                  aria-label="View live demo"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+                <a
+                  href="https://github.com/Account1-Anurag/Imgcrypt"
+                  target="_blank"
+                  aria-label="View code on GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div class="project-card" data-category="web">
+            <div class="project-img">
+              <img
+                src="/Assets/geeks.png"
+                alt="Portfolio website design project"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-info">
+              <h3>RJIT Geeks Club Website</h3>
+              <p>
+                An official and responsive website for the RJIT Geeks Club
+                showcasing current members, alumni, hierarchy, achievements,
+                blogs, and messaging features. Designed to promote community
+                engagement and display the club’s technical initiatives.
+              </p>
+              <div class="project-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://rjitgeeks.vercel.app/" aria-label="View live demo" target="_blank"
+                  ><i class="fas fa-external-link-alt"></i
+                ></a>
+                <a href="https://github.com/Account1-Anurag/Rjit-Geeks-Web-Page" target="_blank" aria-label="View code on GitHub"
+                  ><i class="fab fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div class="project-card" data-category="web">
+            <div class="project-img">
+              <img
+                src="/Assets/movie.png"
+                alt="Weather app project"
+                loading="lazy"
+              />
+            </div>
+            <div class="project-info">
+                <h3>Movie Recommendation App</h3>
+                <p>
+                    A movie recommendation web app that allows users to search and discover movies using the TMDb API. Features include movie details, posters, and suggestions based on popular and trending titles. Designed with a clean, responsive UI for smooth browsing.
+                </p>
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>TMDb API</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://moviedekhoge.onrender.com/" target="_blank" aria-label="View live demo">
+                    <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="https://github.com/Account1-Anurag/Movie-Recommendation-App" target="_blank" aria-label="View code on GitHub">
+                    <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+          <div class="technical-skills">
+            <h3>Technical Skills</h3>
+            <div class="skill-bars">
+              <div class="skill">
+                <div class="skill-name">HTML5</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="95%"></div>
+                </div>
+                <div class="skill-percent">95%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">CSS3</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="90%"></div>
+                </div>
+                <div class="skill-percent">90%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="85%"></div>
+                </div>
+                <div class="skill-percent">85%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">React</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="80%"></div>
+                </div>
+                <div class="skill-percent">80%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Node.js</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="75%"></div>
+                </div>
+                <div class="skill-percent">75%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Responsive Design</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="90%"></div>
+                </div>
+                <div class="skill-percent">90%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Express Js</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="75%"></div>
+                </div>
+                <div class="skill-percent">75%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">MongoDb</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="80%"></div>
+                </div>
+                <div class="skill-percent">80%</div>
+              </div>
+              <div class="skill">
+                <div class="skill-name">Tailwind CSS</div>
+                <div class="skill-bar">
+                  <div class="skill-level" data-level="90%"></div>
+                </div>
+                <div class="skill-percent">90%</div>
+              </div>
+            </div>
+          </div>
+          <div class="soft-skills">
+            <h3>Soft Skills</h3>
+            <div class="soft-skills-grid">
+              <div class="soft-skill">
+                <div class="soft-skill-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h4>Team Collaboration</h4>
+              </div>
+              <div class="soft-skill">
+                <div class="soft-skill-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h4>Problem Solving</h4>
+              </div>
+              <div class="soft-skill">
+                <div class="soft-skill-icon">
+                  <i class="fas fa-tasks"></i>
+                </div>
+                <h4>Project Management</h4>
+              </div>
+              <div class="soft-skill">
+                <div class="soft-skill-icon">
+                  <i class="fas fa-comments"></i>
+                </div>
+                <h4>Communication</h4>
+              </div>
+              <div class="soft-skill">
+                <div class="soft-skill-icon">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <h4>Time Management</h4>
+              </div>
+              <div class="soft-skill">
+                <div class="soft-skill-icon">
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <h4>Adaptability</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section">
+      <div class="container">
+        <h2 class="section-title">Resume</h2>
+        <div class="resume-tabs">
+          <button class="tab-btn active" data-tab="experience">
+            Experience
+          </button>
+          <button class="tab-btn" data-tab="education">Education</button>
+          <button class="tab-btn" data-tab="certifications">
+            Certifications
+          </button>
+        </div>
+        <div class="tab-content">
+          <!-- Experience Tab -->
+          <div id="experience" class="tab-pane active">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023 - 2024</div>
+                <div class="timeline-content">
+                    <h3>Teaching Experience at RJIT Geeks Club</h3>
+                    <h4>RJIT Geeks Club</h4>
+                    <p>
+                        As a mentor and instructor at RJIT Geeks Club, I conducted regular sessions to help students learn programming from scratch, focusing on problem-solving, data structures, and algorithms. I guided new members through coding challenges, organized workshops, and fostered a collaborative learning environment.
+                    </p>
+                    <ul>
+                        <li>Improved student coding proficiency by providing personalized guidance and hands-on coding practice.</li>
+                        <li>Optimized club activities by introducing structured coding contests and knowledge-sharing sessions.</li>
+                        <li>Led migration from legacy teaching materials to interactive, project-based learning methods.</li>
+                        <li>Implemented continuous learning feedback loops, enhancing student engagement and retention.</li>
+                    </ul>
+                    </div>
+              </div>
+              <!-- <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2019 - 2022</div>
+                <div class="timeline-content">
+                  <h3>Web Developer</h3>
+                  <h4>Digital Solutions Agency</h4>
+                  <p>
+                    Developed responsive websites and web applications for
+                    clients across various industries. Collaborated with design
+                    and marketing teams to ensure seamless integration of
+                    functionality and visual appeal.
+                  </p>
+                  <ul>
+                    <li>
+                      Created 25+ client websites with modern technologies
+                    </li>
+                    <li>
+                      Implemented SEO best practices increasing client traffic
+                      by 30%
+                    </li>
+                    <li>
+                      Developed custom e-commerce solutions with payment
+                      integrations
+                    </li>
+                  </ul>
+                </div>
+              </div> -->
+              <!-- <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2018 - 2019</div>
+                <div class="timeline-content">
+                  <h3>Frontend Developer Intern</h3>
+                  <h4>WebCraft Studios</h4>
+                  <p>
+                    Assisted senior developers in building and maintaining
+                    client websites. Contributed to frontend development using
+                    HTML, CSS, and JavaScript.
+                  </p>
+                  <ul>
+                    <li>Designed and implemented responsive UI components</li>
+                    <li>Optimized websites for cross-browser compatibility</li>
+                    <li>
+                      Participated in client meetings and requirement gathering
+                    </li>
+                  </ul>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <!-- Education Tab -->
+          <div id="education" class="tab-pane">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022 - Present</div>
+                <div class="timeline-content">
+                    <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+                    <h4>Rustamji Institute of Technology (RJIT), Gwalior</h4>
+                    <p>
+                        Pursuing a B.Tech in Computer Science and Engineering with a strong focus on web development, data structures, and algorithms. Actively contributed as a mentor at RJIT Geeks Club, organizing coding sessions, workshops, and technical events to support peer learning.
+                    </p>
+                    <p>Relevant Coursework:</p>
+                    <ul>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Web Technologies (HTML, CSS, JavaScript, React)</li>
+                        <li>Database Management Systems</li>
+                        <li>Computer Networks and Operating Systems</li>
+                        <li>Software Engineering and Project Management</li>
+                    </ul>
+                </div>
+            </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2020 - 2022</div>
+                <div class="timeline-content">
+                    <h3>Senior Secondary Education (Class 12th)</h3>
+                    <h4>Anugrah Narayan College, Patna, Bihar</h4>
+                    <p>
+                        Completed Higher Secondary Education with a focus on Physics, Chemistry, and Mathematics (PCM). Developed strong foundational knowledge in core science and mathematics subjects, preparing for a career in engineering and technology.
+                    </p>
+                    <p>Academic Highlights:</p>
+                    <ul>
+                        <li>Consistently scored among the top 5% of the class</li>
+                        <li>Laid the groundwork for programming through early interest in computing</li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Certifications Tab -->
+          <div id="certifications" class="tab-pane">
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>AWS Academy Data Center Technician</h3>
+                    <h4>AWS Academy</h4>
+                    <p>
+                        Gained hands-on knowledge of data center operations, infrastructure, and troubleshooting in cloud environments.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>Introduction to Cloud - Semester 1</h3>
+                    <h4>AWS Academy</h4>
+                    <p>
+                        Completed foundational training in cloud computing, covering core AWS services, architecture, and cloud benefits.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>Introduction to Cloud - Semester 2</h3>
+                    <h4>AWS Academy</h4>
+                    <p>
+                        Deepened understanding of cloud infrastructure and advanced AWS service use cases with lab experience.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>Foundations of Cybersecurity</h3>
+                    <h4>Coursera</h4>
+                    <p>
+                        Explored basic concepts of cybersecurity including threats, vulnerabilities, security controls, and career pathways.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>Problem Solving (Basic)</h3>
+                    <h4>HackerRank</h4>
+                    <p>
+                        Demonstrated fundamental programming and problem-solving skills through practical coding challenges.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>Career Edge – Young Professional</h3>
+                    <h4>TCS iON</h4>
+                    <p>
+                        Completed professional development course focused on communication, presentation, and soft skills for the workplace.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>OOPS Basics</h3>
+                    <h4>Coding Ninjas</h4>
+                    <p>
+                        Learned core Object-Oriented Programming concepts including classes, inheritance, and polymorphism using C++.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="certification-card">
+                    <div class="certification-icon">
+                    <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-details">
+                    <h3>C++ Basics</h3>
+                    <h4>Coding Ninjas</h4>
+                    <p>
+                        Gained a strong foundation in C++ programming including syntax, loops, arrays, and basic problem-solving techniques.
+                    </p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Email</h3>
+                <p>
+                  <a href="mailto:anuragvasu24@gmail.com">anuragvasu24@gmail.com</a>
+                </p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Phone</h3>
+                <p><a href="tel:+91 6204662695">+91 6204662695</a></p>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-details">
+                <h3>Location</h3>
+                <p>Gwalior, MP</p>
+              </div>
+            </div>
+            <div class="social-links">
+              <h3>Connect With Me</h3>
+              <div class="social-icons">
+                <a href="https://github.com/Account1-Anurag" target="_blank" aria-label="GitHub profile"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/anurag-vasu/" target="_blank" aria-label="LinkedIn profile"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+                <a href="https://x.com/Anurag_kumar_07" aria-label="Twitter profile"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <!-- <a href="#" aria-label="Instagram profile"
+                  ><i class="fab fa-instagram"></i
+                ></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required />
+                <span class="error-message"></span>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+                <span class="error-message"></span>
+              </div>
+              <button type="submit" class="btn primary-btn submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+            <div id="formStatus" class="form-status"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <a href="#hero">AK</a>
+          </div>
+          <div class="footer-text">
+            <p>
+              &copy; <span id="current-year"></span> Anurag Kumar. All Rights
+              Reserved.
+            </p>
+          </div>
+          <div class="back-to-top">
+            <a href="#hero" aria-label="Scroll to top">
+              <i class="fas fa-arrow-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+        (function () {
+            emailjs.init("LvVBhit9H2EscGylj"); // 🔁 Replace with your real Public Key
+        })();
+        </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
